@@ -37,7 +37,7 @@ services:
     container_name: keycloak
     hostname: keycloak
     image: keycloak/keycloak
-    command: ['start', '--optimized']
+    command: ['start', '--optimized', '--hostname-strict=false' ]
   postgres:
     container_name: postgres
     hostname: postgres
