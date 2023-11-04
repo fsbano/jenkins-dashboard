@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.18
+FROM registry.access.redhat.com/ubi9/nodejs-18
 COPY . .
 RUN npm i
-CMD node run start
+CMD ["npm", "run", "start"]
