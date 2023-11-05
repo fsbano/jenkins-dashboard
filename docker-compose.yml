@@ -36,6 +36,8 @@ services:
     hostname: keycloak
     image: keycloak/keycloak
     command: ['start-dev']
+    ports:
+      - 8480:8080
   postgres:
     container_name: postgres
     hostname: postgres
