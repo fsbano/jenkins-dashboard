@@ -8,10 +8,8 @@ services:
     volumes:
       - ./jenkins-data:/var/jenkins_home
   jenkins-ui-api:
-    environment:
-      - JENKINS_USERNAME=fsbano
-      - JENKINS_API_KEY=11c54a0aa387cd18150f1b40d7aad30649
-      - JENKINS_API_BASE_URL=jenkins:8080
+    env_file:
+      - jenkins-ui-api-nodejs/.env
     container_name: jenkins-ui-api
     hostname: jenkins-ui-api
     build: jenkins-ui-api-nodejs/.
@@ -37,10 +35,10 @@ services:
     container_name: keycloak
     hostname: keycloak
     image: keycloak/keycloak
-    command: ['start', '--optimized', '--hostname-strict=false' ]
+    command: ['start-dev']
   postgres:
     container_name: postgres
     hostname: postgres
     image: postgres
     ports:
-      - 5432:5432    
+      - 5432:5432
