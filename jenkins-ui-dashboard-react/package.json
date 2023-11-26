@@ -29,7 +29,7 @@
   "dependencies": {
     "@babel/runtime": "latest",
     "@patternfly/react-charts": "^7.0.1",
-    "@patternfly/react-core": "^5.0.0",
+    "@patternfly/react-core": "^5.1.1",
     "@patternfly/react-icons": "^5.0.0",
     "@patternfly/react-styles": "^5.0.0",
     "@patternfly/react-table": "^5.0.1",
